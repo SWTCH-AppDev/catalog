@@ -20,13 +20,14 @@
 
   <dt>Store Address</dt>
   <dd><%= @food.store_address %></dd>
-
+  
   <dt>Latitude</dt>
-  <dd>40.6892</dd>
+  <dd><%= @latitude %></dd>
 
   <dt>Longitude</dt>
-  <dd>-74.0445</dd>
+  <dd><%= @longitude %></dd>
 </dl>
+
 
 <a href="/delete_food/<%= @food.id %>" class="btn btn-default">
   Delete food
@@ -43,7 +44,7 @@
 <script>
   var map;
   function initialize() {
-    var myLatlng = new google.maps.LatLng(40.6892, -74.0445);
+    var myLatlng = new google.maps.LatLng(<%= @latitude %></dd>, <%= @longitude %>);
     var mapOptions = {
       zoom: 15,
       center: myLatlng
@@ -53,7 +54,7 @@
     var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      title: 'Statue of Liberty'
+      title: <%= @address_title %>
     });
   }
   google.maps.event.addDomListener(window, 'load', initialize);

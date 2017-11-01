@@ -14,12 +14,6 @@
 
   <dt>Description</dt>
   <dd><%= @list.description %></dd>
-
-  <dt>Latitude</dt>
-  <dd>40.6892</dd>
-
-  <dt>Longitude</dt>
-  <dd>-74.0445</dd>
 </dl>
 
 <a href="/delete_list/<%= @list.id %>" class="btn btn-default">
@@ -31,25 +25,3 @@
 <a href="/lists">
   Go back
 </a>
-
-<!-- Code for Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB_nAWVr-18Oi_XoadzVHmNT2vevvJfev4"></script>
-<script>
-  var map;
-  function initialize() {
-    var myLatlng = new google.maps.LatLng(40.6892, -74.0445);
-    var mapOptions = {
-      zoom: 15,
-      center: myLatlng
-    };
-    map = new google.maps.Map(document.getElementById('map-canvas'),
-    mapOptions);
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Statue of Liberty'
-    });
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-<div id="map-canvas" style="width: 100%; height: 400px"></div>
