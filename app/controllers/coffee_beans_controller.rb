@@ -18,10 +18,10 @@ class CoffeeBeansController < ApplicationController
   def create_row
     @coffee_bean = CoffeeBean.new
 
-    @coffee_bean.blend_name = params[:blend_name]
-    @coffee_bean.origin = params[:origin]
-    @coffee_bean.variety = params[:variety]
-    @coffee_bean.notes = params[:notes]
+    @coffee_bean.blend_name = params[:some_blend_name]
+    @coffee_bean.origin = params[:some_origin]
+    @coffee_bean.variety = params[:some_variety]
+    @coffee_bean.notes = params[:some_notes]
 
     @coffee_bean.save
 
@@ -29,6 +29,13 @@ class CoffeeBeansController < ApplicationController
   end
 
   def edit_form
+    @coffee_bean = CoffeeBean.find(params["id"])
+    
+    @coffee_bean.blend_name = params[:blend_name]
+    @coffee_bean.origin = params[:origin]
+    @coffee_bean.variety = params[:variety]
+    @coffee_bean.notes = params[:_notes]
+    
     render("coffee_beans_templates/edit_form.html.erb")
   end
 
@@ -49,5 +56,7 @@ class CoffeeBeansController < ApplicationController
     @coffee_bean = CoffeeBean.find(params[:id])
 
     @coffee_bean.destroy
+    
+    redirect_to("/coffee_beans")
   end
 end
