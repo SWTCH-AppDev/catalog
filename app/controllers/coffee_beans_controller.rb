@@ -6,7 +6,7 @@ class CoffeeBeansController < ApplicationController
   end
 
   def show
-    @coffee_bean = CoffeeBean.find(params[id])
+    @coffee_bean = CoffeeBean.find(params["id"])
 
     render("coffee_beans_templates/show.html.erb")
   end
