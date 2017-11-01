@@ -1,0 +1,35 @@
+<h1>
+  Add a new list
+</h1>
+
+<hr>
+
+<form action="/create_list">
+  <!-- Label and input for title -->
+  <div class="form-group">
+    <label for="title" class="control-label">
+      Title
+    </label>
+
+    <input type="text" id="title" name="title" class="form-control">
+  </div>
+
+  <!-- Label and input for description -->
+  <div class="form-group">
+    <label for="description" class="control-label">
+      Description
+    </label>
+
+    <input type="text" id="description" name="description" class="form-control">
+  </div>
+
+  <button class="btn btn-default">
+    Create list
+  </button>
+</form>
+
+<hr>
+
+<a href="/lists">
+  Go back
+</a>

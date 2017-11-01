@@ -1,0 +1,36 @@
+<h1>
+  Edit list #<%= @list.id %>
+</h1>
+
+<hr>
+
+<form action="/update_list/<%= @list.id %>">
+  <!-- Label and input for title -->
+  <div class="form-group">
+    <label for="title" class="control-label">
+      Title
+    </label>
+
+    <input type="text" id="title" name="title" class="form-control" value="<%= @list.title %>">
+  </div>
+
+  <!-- Label and input for description -->
+  <div class="form-group">
+    <label for="description" class="control-label">
+      Description
+    </label>
+
+    <input type="text" id="description" name="description" class="form-control" value="<%= @list.description %>">
+  </div>
+
+
+  <button class="btn btn-default">
+    Update list
+  </button>
+</form>
+
+<hr>
+
+<a href="/lists">
+  Go back
+</a>

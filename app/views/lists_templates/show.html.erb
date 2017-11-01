@@ -1,25 +1,19 @@
 <h1>
-  Food #<%= @food.id %> details
+  List #<%= @list.id %> details
 </h1>
 
-<a href="/foods/<%= @food.id %>/edit">
-  Edit food
+<a href="/lists/<%= @list.id %>/edit">
+  Edit list
 </a>
 
 <hr>
 
 <dl>
-  <dt>Ingredient</dt>
-  <dd><%= @food.ingredient %></dd>
+  <dt>Title</dt>
+  <dd><%= @list.title %></dd>
 
-  <dt>Spice</dt>
-  <dd><%= @food.spice %></dd>
-
-  <dt>Measurement</dt>
-  <dd><%= @food.measurement %></dd>
-
-  <dt>Store Address</dt>
-  <dd><%= @food.store_address %></dd>
+  <dt>Description</dt>
+  <dd><%= @list.description %></dd>
 
   <dt>Latitude</dt>
   <dd>40.6892</dd>
@@ -28,13 +22,13 @@
   <dd>-74.0445</dd>
 </dl>
 
-<a href="/delete_food/<%= @food.id %>" class="btn btn-default">
-  Delete food
+<a href="/delete_list/<%= @list.id %>" class="btn btn-default">
+  Delete list
 </a>
 
 <hr>
 
-<a href="/foods">
+<a href="/lists">
   Go back
 </a>
 

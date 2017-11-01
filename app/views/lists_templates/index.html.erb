@@ -1,0 +1,42 @@
+<h1>
+  All lists
+</h1>
+
+<a href="/lists/new">
+  Add a new list
+</a>
+
+<hr>
+
+<table class="table">
+  <tr>
+    <th>
+      Title
+    </th>
+
+    <th>
+      Description
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @lists.each do |list| %>
+  <tr>
+    <td>
+      <%= list.title %>
+    </td>
+
+    <td>
+      <%= list.description %>
+    </td>
+
+    <td>
+      <a href="/lists/<%= list.id %>">
+        Show details
+      </a>
+    </td>
+  </tr>
+  <% end %>
+</table>

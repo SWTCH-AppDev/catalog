@@ -11,7 +11,7 @@
       Blend name
     </label>
 
-    <input type="text" id="blend_name" name="blend_name" class="form-control">
+    <input type="text" id="blend_name" name="some_blend_name" class="form-control" value="<%= @coffee_bean.blend_name %>">
   </div>
 
   <!-- Label and input for origin -->
@@ -20,7 +20,7 @@
       Origin
     </label>
 
-    <input type="text" id="origin" name="origin" class="form-control">
+    <input type="text" id="origin" name="some_origin" class="form-control" value="<%= @coffee_bean.origin %>">
   </div>
 
   <!-- Label and input for variety -->
@@ -29,7 +29,7 @@
       Variety
     </label>
 
-    <input type="text" id="variety" name="variety" class="form-control">
+    <input type="text" id="variety" name="some_variety" class="form-control" value="<%= @coffee_bean.variety %>">
   </div>
 
   <!-- Label and input for notes -->
@@ -38,7 +38,7 @@
       Notes
     </label>
 
-    <input type="text" id="notes" name="notes" class="form-control">
+    <input type="text" id="notes" name="some_notes" class="form-control" value="<%= @coffee_bean.notes %>">
   </div>
 
   <button class="btn btn-default">
