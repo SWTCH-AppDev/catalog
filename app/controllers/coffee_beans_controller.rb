@@ -1,6 +1,6 @@
 class CoffeeBeansController < ApplicationController
   def index
-    coffee_beans = CoffeeBean.all
+    @coffee_beans = CoffeeBean.all
 
     render("coffee_beans_templates/index.html.erb")
   end

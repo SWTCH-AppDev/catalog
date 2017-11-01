@@ -36,7 +36,8 @@ Rails.application.routes.draw do
   get("/delete_food/:id", { :controller => "foods", :action => "destroy_row" })
 
   #------------------------------
-
+  
+  # INDEX
   get("/", { :controller => "coffee_beans", :action => "index" })
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
